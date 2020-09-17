@@ -48,6 +48,6 @@ Provide the following functions:
 - `docker run demo-sbi`
 可以開 postman 測試或 上 swager-ui
 
-http://localhost:8080/swagger-ui.html#/
+http://localhost:8088/swagger-ui.html#/
 
-> 專案預設 port 8080
+> 專案預設 port 8088
