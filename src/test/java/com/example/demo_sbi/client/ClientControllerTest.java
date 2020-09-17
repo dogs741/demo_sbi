@@ -1,6 +1,7 @@
 package com.example.demo_sbi.client;
 
 import org.junit.jupiter.api.BeforeEach;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -16,7 +17,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 import com.example.demo_sbi.controller.ClientController;
 import com.example.demo_sbi.service.ClientService;
-//@SpringBootTest
+
 @WebMvcTest(ClientController.class)
 public class ClientControllerTest {
 	@Autowired
