@@ -11,6 +11,7 @@ public class ResponseUtil {
 	
 	public final static SBIBaseResponse<Void> SUCCESS = new SBIBaseResponse<>(HttpStatus.OK.value(), "Success");
 	public final static SBIBaseResponse<Void> FAILURE = new SBIBaseResponse<>(HttpStatus.BAD_REQUEST.value(), "Failed");
+	public final static SBIBaseResponse<Void> UNAUTHORIZED = new SBIBaseResponse<>(HttpStatus.UNAUTHORIZED.value(), "Unauthorized role");
 	public final static SBIBaseResponse<Void> NO_DATA_FOUND = new SBIBaseResponse<>(HttpStatus.BAD_REQUEST.value(), "No Data Found");
 	public final static SBIBaseResponse<Void> ERRORS = new SBIBaseResponse<>(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Server Errors");
 	

@@ -3,6 +3,7 @@ package com.example.demo_sbi.handler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -38,6 +39,15 @@ public class SBIExceptionHandler {
 	public SBIBaseResponse<Void> handleEntityNotFoundException(Exception ex){
 		logger.warn("server warn:{}", ex.getMessage());
 		return ResponseUtil.NO_DATA_FOUND;
+	}
+	
+	//找無資料
+	@ExceptionHandler(AccessDeniedException.class)
+	@ResponseStatus(HttpStatus.UNAUTHORIZED)
+	@ResponseBody
+	public SBIBaseResponse<Void> handleAccessDeniedException(Exception ex){
+		logger.warn("server warn:{}", ex.getMessage());
+		return ResponseUtil.UNAUTHORIZED;
 	}
 	
 	//內部錯誤
