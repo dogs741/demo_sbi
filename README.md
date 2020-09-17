@@ -45,7 +45,7 @@ Provide the following functions:
 ## 專案目錄下 build image
 - 啟動 docker
 - command line 執行 `mvn compile jib:dockerBuild`
-- `docker run demo-sbi`
+- `docker run sbi-demo -p 8088:8088`
 可以開 postman 測試或 上 swager-ui
 
 http://localhost:8088/swagger-ui.html#/
