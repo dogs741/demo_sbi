@@ -1,4 +1,4 @@
-package com.example.demo_sbi.service;
+package com.example.demo_sbi.service.company;
 
 import com.example.demo_sbi.model.company.CompanyRequest;
 import com.example.demo_sbi.model.company.CompanyVO;

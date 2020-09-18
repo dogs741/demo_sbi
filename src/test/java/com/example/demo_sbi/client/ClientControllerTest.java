@@ -16,7 +16,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import com.example.demo_sbi.controller.ClientController;
-import com.example.demo_sbi.service.ClientService;
+import com.example.demo_sbi.service.client.ClientService;
 
 @WebMvcTest(ClientController.class)
 public class ClientControllerTest {

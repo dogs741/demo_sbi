@@ -17,8 +17,8 @@ import com.example.demo_sbi.model.client.ClientRequest;
 import com.example.demo_sbi.model.client.ClientVO;
 import com.example.demo_sbi.model.company.CompanyRequest;
 import com.example.demo_sbi.model.company.CompanyVO;
-import com.example.demo_sbi.service.ClientService;
-import com.example.demo_sbi.service.CompanyService;
+import com.example.demo_sbi.service.client.ClientService;
+import com.example.demo_sbi.service.company.CompanyService;
 import com.example.demo_sbi.utils.ClientUtil;  
 
 @SpringBootTest

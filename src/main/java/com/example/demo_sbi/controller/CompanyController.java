@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo_sbi.model.SBIBaseResponse;
 import com.example.demo_sbi.model.company.CompanyRequest;
 import com.example.demo_sbi.model.company.CompanyVO;
-import com.example.demo_sbi.service.CompanyService;
+import com.example.demo_sbi.service.company.CompanyService;
 import com.example.demo_sbi.utils.ResponseUtil;
 
 import io.swagger.annotations.ApiOperation;

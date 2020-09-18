@@ -1,4 +1,4 @@
-package com.example.demo_sbi.service;
+package com.example.demo_sbi.service.client;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo_sbi.exception.ValidateException;
 import com.example.demo_sbi.exception.ValidateException.LogicType;
@@ -36,6 +37,7 @@ public class ClientServiceImpl implements ClientService {
 		return ClientUtil.transferPOToVO(result.get());
 	}
 
+	@Transactional
 	@Override
 	public ClientVO insertClient(ClientRequest clientRequest) {
 		ClientPO clientPO = ClientUtil.transferRequestToPO(clientRequest);
@@ -44,6 +46,7 @@ public class ClientServiceImpl implements ClientService {
 		return ClientUtil.transferPOToVO(clientRepository.save(clientPO));
 	}
 
+	@Transactional
 	@Override
 	public ClientVO updateClient(ClientRequest clientRequest) {
 		
@@ -63,11 +66,13 @@ public class ClientServiceImpl implements ClientService {
 		return ClientUtil.transferPOToVO(clientRepository.save(clientPO));
 	}
 
+	@Transactional
 	@Override
 	public void deleteClientById(Integer clientId) {
 		clientRepository.deleteById(clientId);
 	}
 
+	@Transactional
 	@Override
 	public List<ClientVO> batchInsertClient(List<ClientRequest> clientRequests) {
 		List<ClientPO> clientPOs = ClientUtil.transferRequestToPO(clientRequests);

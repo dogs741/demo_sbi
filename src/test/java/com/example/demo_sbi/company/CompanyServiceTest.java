@@ -12,7 +12,7 @@ import org.springframework.security.test.context.support.WithMockUser;
 import com.example.demo_sbi.exception.ValidateException;
 import com.example.demo_sbi.model.company.CompanyRequest;
 import com.example.demo_sbi.model.company.CompanyVO;
-import com.example.demo_sbi.service.CompanyService;
+import com.example.demo_sbi.service.company.CompanyService;
 import com.example.demo_sbi.utils.CompanyUtil;
 
 @SpringBootTest

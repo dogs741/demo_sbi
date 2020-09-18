@@ -1,4 +1,4 @@
-package com.example.demo_sbi.service;
+package com.example.demo_sbi.service.client;
 
 import java.util.List;
 

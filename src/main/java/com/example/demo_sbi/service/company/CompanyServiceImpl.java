@@ -1,4 +1,4 @@
-package com.example.demo_sbi.service;
+package com.example.demo_sbi.service.company;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo_sbi.exception.ValidateException;
 import com.example.demo_sbi.exception.ValidateException.LogicType;
@@ -31,6 +32,7 @@ public class CompanyServiceImpl implements CompanyService {
 		return CompanyUtil.transferPOToVO(result.get());
 	}
 
+	@Transactional
 	@Override
 	public CompanyVO insertCompany(CompanyRequest companyRequest) {
 		CompanyPO companyPO = CompanyUtil.transferRequestToPO(companyRequest);
@@ -39,6 +41,7 @@ public class CompanyServiceImpl implements CompanyService {
 		return CompanyUtil.transferPOToVO(companyRepository.save(companyPO));
 	}
 
+	@Transactional
 	@Override
 	public CompanyVO updateCompany(CompanyRequest companyRequest) {
 		Optional<CompanyPO> result = companyRepository.findById(companyRequest.getId());
@@ -53,6 +56,7 @@ public class CompanyServiceImpl implements CompanyService {
 		return CompanyUtil.transferPOToVO(companyRepository.save(companyPO));
 	}
 
+	@Transactional
 	@Override
 	public void deleteCompanyById(Integer companyId) {
 		companyRepository.deleteById(companyId);
