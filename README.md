@@ -25,6 +25,12 @@ Provide the following functions:
 - Request object validated by Java Bean Validate ( JSR303 )
 - Integrate all response into same output with the structure of success, fail & error
 - Swagger UI 
+
+## Role
+- admin / admin
+- manager / manager
+- operator / operator
+
 ## Framework
 - Spring Boot
 - Spring Data 
@@ -51,3 +57,4 @@ Provide the following functions:
 http://localhost:8088/swagger-ui.html#/
 
 > 專案預設 port 8088
+
