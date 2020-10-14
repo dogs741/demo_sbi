@@ -17,7 +17,7 @@ public class ClientUtil {
 	public static ClientVO transferPOToVO(ClientPO clientPO) {
 		ClientVO clientVO = new ClientVO();
 		BeanUtils.copyProperties(clientPO, clientVO);
-		clientVO.setCompanyId(clientPO.getId());
+		clientVO.setCompanyId(clientPO.getCompanyPO().getId());
 		return clientVO;
 	}
 	
